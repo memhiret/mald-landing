@@ -39,8 +39,8 @@ export default function Footer() {
               className="mb-4"
             />
             <p className="mb-4 text-gray-700">
-              The complete learning community where every child’s uniqueness is
-              celebrated.
+              Global-standard Cambridge teaching, caring guidance, and space for
+              every learner's unique journey.
             </p>
             {/* Social icons removed for now */}
           </div>
@@ -66,34 +66,82 @@ export default function Footer() {
           </div>
 
           {/* Contact */}
-          <div>
+          <div className="md:col-span-2">
             <h3 className="mb-4 font-semibold">Contact Info</h3>
-            <div className="space-y-3 text-gray-700">
+            <div className="space-y-4 text-gray-700">
+              {/* Location */}
               <div className="flex items-start space-x-2">
                 <MapPin size={18} className="mt-1 flex-shrink-0 text-brand" />
                 <span>Addis Ababa, Ethiopia</span>
               </div>
-              <div className="flex items-start space-x-2">
-                <Phone size={18} className="mt-1 flex-shrink-0 text-brand" />
-                <span>Telephone: +251 11 833 7319</span>
+              
+              {/* Campus Phone Numbers Grid */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                {/* Abo Campus */}
+                <div>
+                  <h4 className="font-medium text-brand mb-3 text-sm">Abo Campus</h4>
+                  <div className="space-y-3">
+                    <div className="flex items-start space-x-2">
+                      <Smartphone size={16} className="mt-1 flex-shrink-0 text-brand" />
+                      <div>
+                        <div className="font-medium text-xs text-gray-600">Early Years Division</div>
+                        <span className="text-sm">+251 99 363 9903</span>
+                      </div>
+                    </div>
+                    <div className="flex items-start space-x-2">
+                      <Smartphone size={16} className="mt-1 flex-shrink-0 text-brand" />
+                      <div>
+                        <div className="font-medium text-xs text-gray-600">Primary Division</div>
+                        <span className="text-sm">+251 908 174 205</span>
+                      </div>
+                    </div>
+                    <a
+                      href="https://maps.app.goo.gl/ZtYLforThjtycjVdA"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 mt-2 px-3 py-1.5 bg-brand/10 text-brand rounded-lg hover:bg-brand/20 transition-colors duration-200 text-xs font-medium"
+                    >
+                      <MapPin size={12} />
+                      View Location
+                    </a>
+                  </div>
+                </div>
+                
+                {/* CMC Campus */}
+                <div>
+                  <h4 className="font-medium text-brand mb-3 text-sm">CMC Campus</h4>
+                  <div className="space-y-3">
+                    <div className="flex items-start space-x-2">
+                      <Smartphone size={16} className="mt-1 flex-shrink-0 text-brand" />
+                      <div>
+                        <div className="font-medium text-xs text-gray-600">Early Years Division</div>
+                        <span className="text-sm">+251 908 174 505</span>
+                      </div>
+                    </div>
+                    <div className="flex items-start space-x-2">
+                      <Smartphone size={16} className="mt-1 flex-shrink-0 text-brand" />
+                      <div>
+                        <div className="font-medium text-xs text-gray-600">Primary to Lower Secondary</div>
+                        <span className="text-sm">+251 968 197 141</span>
+                      </div>
+                    </div>
+                    <a
+                      href="https://maps.app.goo.gl/sGEPDZYuK8Xh7KNZ6"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 mt-2 px-3 py-1.5 bg-brand/10 text-brand rounded-lg hover:bg-brand/20 transition-colors duration-200 text-xs font-medium"
+                    >
+                      <MapPin size={12} />
+                      View Location
+                    </a>
+                  </div>
+                </div>
               </div>
-              <div className="flex items-start space-x-2">
-                <Smartphone
-                  size={18}
-                  className="mt-1 flex-shrink-0 text-brand"
-                />
-                <span>Mobile: +251 91 163 3295 (Genet)</span>
-              </div>
-              <div className="flex items-start space-x-2">
-                <Smartphone
-                  size={18}
-                  className="mt-1 flex-shrink-0 text-brand"
-                />
-                <span>Mobile: +251 91 113 0184 (Konjit)</span>
-              </div>
-              <div className="flex items-start space-x-2">
+              
+              {/* Email */}
+              <div className="flex items-start space-x-2 pt-2">
                 <Mail size={18} className="mt-1 flex-shrink-0 text-brand" />
-                <span>Email: info@maldeducation.com</span>
+                <span>Email: info@maldeducationalsupport.com</span>
               </div>
             </div>
           </div>

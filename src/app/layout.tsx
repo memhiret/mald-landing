@@ -7,6 +7,7 @@ import Navbar from "@/components/Navbar";
 import MobileSheet from "@/components/MobileSheet";
 import Footer from "@/components/Footer";
 import ScrollButtons from "@/components/ScrollButtons";
+import { ErrorBoundary } from "@/components/ErrorBoundary";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -26,12 +27,20 @@ const manrope = Manrope({ subsets: ["latin"], variable: "--font-manrope", displa
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={cn(inter.variable, funnel.variable, manrope.variable)}>
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#0B6B54" />
+      </head>
       <body className="flex min-h-screen flex-col bg-background font-sans antialiased">
-        <Navbar />
-        <MobileSheet />
-        <main className="flex-1">{children}</main>
-        <Footer />
-        <ScrollButtons />
+        <ErrorBoundary>
+          <Navbar />
+          <MobileSheet />
+          <main className="flex-1">{children}</main>
+          <Footer />
+          <ScrollButtons />
+        </ErrorBoundary>
       </body>
     </html>
   );

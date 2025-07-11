@@ -1,22 +1,15 @@
 "use client";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { Award, Heart, Brain } from "lucide-react";
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-  CardDescription,
-} from "@/components/ui/card";
 import { StatsCounter } from "@/components/StatsCounter";
+import ImageCarousel from "@/components/ImageCarousel";
 import Link from "next/link";
 
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-white font-sans text-base leading-relaxed">
       {/* Hero */}
-      <section className="bg-white px-4 py-20 md:py-28">
+      <section className="bg-white px-3 py-12 sm:px-4 sm:py-16 md:py-28">
         <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 md:grid-cols-2">
           {/* Left column */}
           <div className="space-y-8">
@@ -202,7 +195,28 @@ export default function HomePage() {
         </div>
       </section>
 
-      <div className="h-16 bg-gradient-to-b from-gray-50 to-white" />
+      <div className="h-8 sm:h-12 md:h-16 bg-gradient-to-b from-gray-50 to-white" />
+
+      {/* Life at MALD Gallery */}
+      <section className="bg-white px-4 py-12 sm:py-16 md:py-20">
+        <div className="container mx-auto max-w-7xl">
+          <div className="mx-auto max-w-3xl text-center mb-12">
+            <h2 className="font-display text-3xl font-bold leading-tight sm:text-4xl text-gray-900 mb-4">
+              Experience MALD Life
+            </h2>
+            <p className="text-lg leading-relaxed text-gray-700">
+              Take a glimpse into our vibrant learning community where every
+              moment is filled with discovery, growth, and joy.
+            </p>
+          </div>
+
+          <div className="flex justify-center">
+            <ImageCarousel />
+          </div>
+        </div>
+      </section>
+
+      <div className="h-8 sm:h-12 md:h-16 bg-gradient-to-b from-white to-gray-50" />
 
       {/* Stats */}
       <section className="bg-white px-4 py-20">
